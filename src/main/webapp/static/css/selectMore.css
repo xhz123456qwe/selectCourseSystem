@@ -1,0 +1,66 @@
+.smt{
+    float: left;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.smt1{
+    float: left;
+    height: 30px;
+    width: 130px;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: STSong;
+    font-weight: bold;
+}
+
+.smtit{
+    float: left;
+    height: 370px;
+    width: 45%;
+}
+
+
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(140 140 140);
+    font-family: sans-serif;
+}
+
+thead {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(237 238 242);
+}
+tbody{
+    font-size: 13px;
+}
+
+thead th{
+    /*1260/9=140*/
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody th,
+td {
+    width: 140px;
+    height: 55px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody > tr:nth-child(even) {
+    background-color: rgb(237 238 242);
+}
+
+.smpage{
+    float: left;
+    width: 50%;
+    font-size: 18px;
+    height: 30px;
+    padding-left: 200px;
+}

@@ -1,0 +1,70 @@
+.foot{
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    background-color: #192869;
+}
+
+.pic2{
+    margin-top: 40px;
+    margin-left: 50px;
+    float: left;
+    height: 80px;
+    width: 450px;
+    margin-bottom: 80px;
+
+}
+.pic3{
+    float: left;
+    color: white;
+    font-weight: bold;
+    width: 450px;
+    line-height: 25px;
+    height: 25px;
+}
+.pic4{
+    /*50  *  9*/
+    float: left;
+    width: 450px;
+    margin-top: 15px;
+    height: 40px;
+}
+.pic5{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+}
+
+.tel{
+    margin-top: 40px;
+    color: white;
+    margin-left: 200px;
+    float: left;
+    height: 150px;
+    width: 500px;
+}
+.tel1{
+    float: left;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    font-size: 12px;
+    text-align: center;
+}
+.footer_info{
+    float: left;
+    margin-top: 10px;
+    height: 90px;
+    width: 500px;
+}
+
+.footer_Info1{
+    color: white;
+    float: left;
+    height: 30px;
+    width: 500px;
+    line-height: 30px;
+    font-size: 10px;
+}

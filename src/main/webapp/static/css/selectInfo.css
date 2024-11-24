@@ -1,0 +1,109 @@
+.bod3{
+    height: 300px;
+    /* 1320 */
+    width: 100%;
+    margin-top: 30px;
+    padding:30px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.bod33{
+    height: 230px;
+    width: 30%;
+    float: left;
+    background-color: #2b669a;
+    padding: 30px;
+}
+.bod34{
+    float: left;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: STXinwei;
+}
+.bod35{
+    float: left;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.bod36{
+    float: left;
+    height: 30px;
+    width: 100%;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.stit{
+    float: left;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.sbod{
+    float: left;
+    height: 400px;
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(140 140 140);
+    font-family: sans-serif;
+}
+
+thead {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(237 238 242);
+}
+tbody{
+    font-size: 13px;
+}
+
+thead th{
+    /*1260/9=140*/
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody th,
+td {
+    width: 140px;
+    height: 70px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody > tr:nth-child(even) {
+    background-color: rgb(237 238 242);
+}
+.spage{
+    margin-top: 20px;
+    height: 30px;
+    width: 100%;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+}
+
+.jdt{
+    width: 200px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #F0FFFF;
+}
+.jdtl{
+    height: 6px;
+    width: 0;
+    border-radius: 3px;
+    background-color: red;
+}

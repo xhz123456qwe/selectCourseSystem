@@ -1,0 +1,83 @@
+.cTable{
+    margin-top: 30px;
+    float: left;
+    top: 30px;
+    /*height: 700px;*/
+    width: 1320px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+}
+.titleT{
+    float: left;
+    width: 1270px;
+    height: 40px;
+    line-height: 40px;
+    font-family: STXinwei;
+    font-size: 25px;
+}
+
+.cTab{
+    float: left;
+    width: 1270px;
+    /*height: 900px;*/
+    margin-top: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(140 140 140);
+    font-family: sans-serif;
+}
+thead {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(237 238 242);
+}
+tbody{
+    font-size: 17px;
+}
+
+thead th{
+    width: 177px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid rgb(160 160 160);
+}
+
+tbody th,
+td {
+    width: 177px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid rgb(160 160 160);
+}
+tbody > tr:nth-child(even) {
+    background-color: rgb(237 238 242);
+}
+
+.div1{
+    float: left;
+    height: 100px;
+    width: 177px;
+}
+
+.div2{
+    float: left;
+    width: 177px;
+    height: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: STXinwei;
+}
+.div3{
+    float: left;
+    width: 177px;
+    /*height: 35px;*/
+    font-size: 15px;
+}
+
+.div_many{
+    border-bottom: 1px solid #adadad;
+}

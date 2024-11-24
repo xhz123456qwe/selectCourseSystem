@@ -1,0 +1,121 @@
+.body1{
+    height: 1000px;
+    /* 1320 */
+    width: 100%;
+    margin-top: 30px;
+    padding:30px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.my_inf{
+    float: left;
+    height: 200px;
+    width: 1260px;
+    margin-bottom: 30px;
+    /*background-color: gray;*/
+}
+.basic_inf{
+    float: left;
+    height: 300px;
+    width: 1260px;
+}
+.state{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 23px;
+    width: 1260px;
+}
+.sys1{
+    float: left;
+    height: 200px;
+    width: 1260px;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+.sys2{
+    float: left;
+    height: 200px;
+    width: 250px;
+}
+.cir2{
+    float: left;
+    height: 80px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 24px;
+    width: 80px;
+    margin-top: 30px;
+    border-radius: 40px;
+    background-color: #b2dba1;
+}
+.word1{
+    float: left;
+    margin-top: 30px;
+    height: 80px;
+    padding-left: 20px;
+    width: 170px;
+}
+.word11{
+    font-family: KaiTi;
+    float: left;
+    height: 30px;
+    width: 170px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.word12{
+    float: left;
+    margin-top: 10px;
+    height: 40px;
+    width: 170px;
+    font-size: 27px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.a2{
+    border: 0;
+    padding:4px 20px;
+    background-color: #2b669a;
+    color: white;
+}
+.circle{
+    float: left;
+    display: block;
+    width:10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-right: 10px;
+    background-color: lightseagreen;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin-left: 80px;
+    margin-top: 50px;
+    border: 1px solid rgb(140 140 140);
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+thead{
+    background-color: rgb(237 238 242);
+    text-align: center;
+    font-size: 15px;
+}
+tbody{
+    background-color: white;
+    font-size: 13px;
+}
+th,
+td {
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid rgb(160 160 160);
+}

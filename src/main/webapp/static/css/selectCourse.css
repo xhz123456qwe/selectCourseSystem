@@ -1,0 +1,112 @@
+.choice{
+    margin-top: 30px;
+    padding: 30px;
+    float: left;
+    top: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+.chin{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    float: left;
+    width: 240px;
+    height: 26px;
+    line-height: 26px;
+}
+.chin2{
+    width: 240px;
+    height: 200px;
+    float: left;
+    font-size: 15px;
+}
+
+.ch1{
+    float: left;
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.ch1 input{
+    width: 175px;
+    height: 30px;
+}
+
+.tab{
+    margin-top: 30px;
+    float: right;
+    height: 550px;
+    width: 990px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.tab_title{
+    float: left;
+    width: 940px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tab_context{
+    float: left;
+    width: 940px;
+    height: 400px;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(140 140 140);
+    font-family: sans-serif;
+}
+
+thead {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(237 238 242);
+}
+tbody{
+    font-size: 13px;
+}
+
+thead th{
+    width: 134px;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody th,
+td {
+    width: 134px;
+    height: 70px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody > tr:nth-child(even) {
+    background-color: rgb(237 238 242);
+}
+
+.a_border{
+    border: 1px solid gray;
+    padding: 3px;
+    border-radius: 7px;
+}
+.a_d{
+    padding: 2px 16px;
+}
+.page{
+    float: left;
+    width: 940px;
+    height: 30px;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 20px;
+}

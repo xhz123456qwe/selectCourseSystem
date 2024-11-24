@@ -1,0 +1,110 @@
+.sel{
+    margin-top: 30px;
+    float: left;
+    top: 30px;
+    height: 170px;
+    /*1320  *200*/
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.score{
+    float: left;
+    font-size: 30px;
+    width: 630px;
+    font-weight: bold;
+    line-height: 70px;
+    height: 70px;
+    margin-left: 30px;
+}
+.divide{
+    float: left;
+    height: 2px;
+    width: 1260px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: gray;
+    margin-bottom: 10px;
+}
+.sel2{
+    float: left;
+    margin-left: 30px;
+    /*1260/3=420*/
+    width: 1260px;
+    font-size: 15px;
+}
+.s1{
+    float: left;
+    width: 420px;
+    margin-bottom: 10px;
+}
+.hadSel{
+    margin-top: 30px;
+    float: left;
+    top: 30px;
+    height: 600px;
+    /*1320  *200*/
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+.ti{
+    float: left;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.table1{
+    float: left;
+    width: 1260px;
+    height: 450px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(140 140 140);
+    font-family: sans-serif;
+}
+
+thead {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(237 238 242);
+}
+tbody{
+    font-size: 13px;
+}
+
+thead th{
+    /*1260/9=140*/
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody th,
+td {
+    width: 140px;
+    height: 70px;
+    text-align: center;
+    border-bottom: 1px solid rgb(160 160 160);
+}
+
+tbody > tr:nth-child(even) {
+    background-color: rgb(237 238 242);
+}
+.page{
+    float: left;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 18px;
+}
+.a_border{
+    border: 1px solid gray;
+    padding: 3px;
+    border-radius: 7px;
+}

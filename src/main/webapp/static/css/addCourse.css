@@ -1,0 +1,41 @@
+.act{
+    float: left;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: STSong;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.acb{
+    float: left;
+    height: 380px;
+    width: 30%;
+}
+.acb1{
+    float: left;
+    height: 30px;
+    width: 100%;
+    margin-top: 25px;
+}
+.ch2{
+    float: left;
+    width: 30%;
+    height: 30px;
+    font-weight: normal!important;
+    margin-right: 3px;
+}
+.acb3{
+    float: left;
+    width: 100%;
+    height: 30px;
+    color: white;
+}
+
+.a4{
+    background-color: #2b669a;
+    color: white;
+    margin-left: 20px;
+    padding: 3px 20px;
+}

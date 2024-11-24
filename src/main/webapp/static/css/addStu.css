@@ -1,0 +1,21 @@
+.addTit{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: STSong;
+    font-weight: bold;
+}
+.bol{
+    float: left;
+    width: 400px;
+    height: 300px;
+    /*background-color: gray;*/
+}
+.bol1{
+    float: left;
+    width: 400px;
+    height: 50px;
+    padding-top: 30px;
+}
