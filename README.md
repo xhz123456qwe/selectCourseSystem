@@ -1,0 +1,2 @@
+# selectCourseSystem
+用springmvc实现的校园选课管理系统
