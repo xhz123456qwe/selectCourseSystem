@@ -5,7 +5,12 @@ import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.context.annotation.Bean;
 
 import javax.sql.DataSource;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   MyBaties配置
+ *
+ */
 public class MyBatisConfig
 {
 

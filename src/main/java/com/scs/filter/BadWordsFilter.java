@@ -7,6 +7,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author 徐豪智
+ * @description   敏感词屏蔽
+ */
 @jakarta.servlet.annotation.WebFilter(value = "/*", filterName = "WebFilter", initParams = {@WebInitParam(name = "badWord", value = "傻逼")})
 public class BadWordsFilter implements Filter
 {

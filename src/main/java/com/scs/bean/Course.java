@@ -1,5 +1,11 @@
 package com.scs.bean;
 
+/**
+ *
+ * @author 徐豪智
+ * @description   课程类
+ *
+ */
 public class Course
 {
     private Long cId;

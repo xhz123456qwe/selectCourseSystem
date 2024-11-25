@@ -5,7 +5,12 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-
+/**
+ *
+ * @author 徐豪智
+ * @description   Web.xml配置
+ *
+ */
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
 {
 
@@ -30,7 +35,10 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
         return new String[]{"/"};
     }
 
-    //    配置过滤器
+    /**
+     * 配置过滤器
+     * @return   过滤器数组
+     */
     @Override
     protected Filter[] getServletFilters()
     {

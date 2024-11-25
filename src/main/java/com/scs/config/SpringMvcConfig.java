@@ -14,11 +14,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import java.util.List;
 import java.util.Properties;
 
-
+/**
+ *
+ * @author 徐豪智
+ * @description   SpringMVC配置
+ *
+ */
 @Configuration
 @ComponentScan("com.scs.controller")
 @EnableWebMvc
-
 public class SpringMvcConfig implements WebMvcConfigurer
 {
     @Bean

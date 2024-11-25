@@ -5,7 +5,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   阻止未经过登录直接进入学生界面
+ */
 public class StuLoginHandlerInterceptor implements HandlerInterceptor
 {
     @Override

@@ -26,7 +26,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   管理员管理系统
+ */
 @Controller
 @RequestMapping("/manager")
 public class ManagerController
@@ -43,6 +47,17 @@ public class ManagerController
     @Autowired
     private Stu_courseService stu_courseService;
 
+    /**
+     * 判断管理员是否存在，若存在则加入，同时实现10天内免登录
+     * @param username  账号编号
+     * @param password  密码
+     * @param remember  是否10天免登录
+     * @param session   会话记忆，传递参数
+     * @param model     传递参数
+     * @param request   请求
+     * @param response  响应
+     * @return JSP页面
+     */
     @RequestMapping(method = RequestMethod.POST)
     public String judgeManager(
             @RequestParam(value = "username")
@@ -80,7 +95,11 @@ public class ManagerController
         }
     }
 
-
+    /**
+     * 跳转到管理员主页
+     * @param model
+     * @return stuMainPage
+     */
     @RequestMapping(value = "/mainPage", method = RequestMethod.GET)
     public String showManagerMainPage(Model model)
     {
@@ -134,6 +153,12 @@ public class ManagerController
         return "managerMainPage";
     }
 
+    /**
+     * 更新管理员信息
+     * @param mid
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/updateMag/{mid}", method = RequestMethod.GET)
     public String updateManager(
             @PathVariable("mid")
@@ -167,6 +192,13 @@ public class ManagerController
         return "redirect:/manager/mainPage";
     }
 
+    /**
+     * 显示学生信息
+     * @param page
+     * @param session
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/stuInfo", method = RequestMethod.GET)
     public String showStudentInfo(
             @RequestParam(value = "page")
@@ -244,6 +276,14 @@ public class ManagerController
         return "studentInfo";
     }
 
+    /**
+     * 也是显示学生信息，此处主要处理查询后分页的bug
+     * @param page
+     * @param session
+     * @param model
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/stuInfo2", method = RequestMethod.GET)
     public String showStuInfoBySearchAndGet(
             @RequestParam("page")
@@ -353,6 +393,13 @@ public class ManagerController
     }
 
 
+    /**
+     * 删除学生信息
+     * @param sid
+     * @param pg
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/stuInfo/delete/{sid}/{pg}")
     public String deleteStu(
             @PathVariable(value = "sid")
@@ -388,6 +435,13 @@ public class ManagerController
         }
     }
 
+    /**
+     * 更新学生信息
+     * @param sid
+     * @param pg
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/stuInfo/update/{sid}/{pg}", method = RequestMethod.POST)
     public String toUpdateStu(
             @PathVariable(value = "sid")
@@ -442,6 +496,10 @@ public class ManagerController
 
     }
 
+    /**
+     * 增加学生信息
+     * @return
+     */
     @RequestMapping(value = "/stuInfo/toAddStu")
     public String toAddStu()
     {
@@ -513,6 +571,14 @@ public class ManagerController
         return "managerInfo";
     }
 
+    /**
+     * 处理管理员界面翻页后信息的获取与展示
+     * @param page
+     * @param model
+     * @param session
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/managerInfo2/{page}",method = RequestMethod.GET)
     public String managerInfoBySearchAndGet(
             @PathVariable(value = "page")
@@ -536,6 +602,16 @@ public class ManagerController
         return "managerInfo";
     }
 
+    /**
+     * 处理查询后分页的bug
+     * @param mname
+     * @param mnumber
+     * @param state
+     * @param model
+     * @param session
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/managerInfo2", method = RequestMethod.POST)
     public String managerInfoBySearch(
             @RequestParam("mname")
@@ -613,6 +689,12 @@ public class ManagerController
         return "managerInfo";
     }
 
+    /**
+     * 管理员信息的删除
+     * @param mid
+     * @param nowPage
+     * @return
+     */
     @RequestMapping(value = "/managerInfo/delete/{mid}/{nowPage}")
     public String managerDelete(
             @PathVariable("mid")
@@ -779,6 +861,14 @@ public class ManagerController
         return "courseInfo";
     }
 
+    /**
+     * 处理课程管理翻页的信息的筛选与展示
+     * @param page
+     * @param model
+     * @param session
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/courseInfo2/{page}",method = RequestMethod.GET)
     public String showCourseBySearchAndGet(
             @PathVariable(value = "page")
@@ -804,6 +894,13 @@ public class ManagerController
         return "courseInfo";
     }
 
+    /**
+     * 显示课程的详细信息
+     * @param cid
+     * @param page
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/courseInfo/more/{cid}/{page}", method = RequestMethod.POST)
     public String showMore(
             @PathVariable("cid")
@@ -820,6 +917,13 @@ public class ManagerController
         return "courseMore";
     }
 
+    /**
+     * 课程的删除操作
+     * @param cid
+     * @param page
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/courseInfo/delete/{cid}/{nowPage}", method = RequestMethod.POST)
     public String deleteCourse(
             @PathVariable("cid")
@@ -838,6 +942,10 @@ public class ManagerController
         return "redirect:/manager/courseInfo/" + page;
     }
 
+    /**
+     * 课程的添加操作
+     * @return
+     */
     @RequestMapping(value = "/courseInfo/toAdd", method = RequestMethod.GET)
     public String toAddCourse()
     {
@@ -866,6 +974,13 @@ public class ManagerController
         return "redirect:/manager/courseInfo/1";
     }
 
+    /**
+     * 课程信息的更新操作
+     * @param cid
+     * @param page
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/courseInfo/toUpdate/{cid}/{nowPage}", method = RequestMethod.POST)
     public String toUpdateCourse(
             @PathVariable("cid")
@@ -903,7 +1018,13 @@ public class ManagerController
         return "redirect:/manager/courseInfo/" + page;
     }
 
-
+    /**
+     * 显示分页后的选课信息
+     * @param page
+     * @param session
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/selectInfo/{page}", method = RequestMethod.GET)
     public String showSelect(
             @PathVariable(value = "page")
@@ -945,6 +1066,16 @@ public class ManagerController
         return "selectInfo";
     }
 
+    /**
+     * 处理查询后再翻页的BUG
+     * @param cname
+     * @param cnumber
+     * @param over
+     * @param model
+     * @param session
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/selectInfo2", method = RequestMethod.POST)
     public String showSelectBySearch(
             @RequestParam("cname")
@@ -1025,6 +1156,14 @@ public class ManagerController
         return "selectInfo";
     }
 
+    /**
+     * 查询后再进行翻页
+     * @param page
+     * @param model
+     * @param session
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/selectInfo2/{page}",method = RequestMethod.GET)
     public String showSelectBySearchAndGet(
             @PathVariable(value = "page")
@@ -1049,6 +1188,14 @@ public class ManagerController
         return "selectInfo";
     }
 
+    /**
+     * 对选课进行选课管理
+     * @param cid
+     * @param pageL
+     * @param pageR
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/selectInfo/select/{cid}/{pageL}/{pageR}", method = RequestMethod.GET)
     public String selectStuCourse(
             @PathVariable(value = "cid")
@@ -1113,6 +1260,16 @@ public class ManagerController
         return "selectMore";
     }
 
+    /**
+     * 退出选课管理
+     * @param sid
+     * @param cid
+     * @param nowL
+     * @param nowR
+     * @param session
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/backCourse", method = RequestMethod.POST)
     public String backCourseFromStu(
             @RequestParam("sid")
@@ -1196,6 +1353,11 @@ public class ManagerController
         return "selectMore";
     }
 
+    /**
+     * 退出管理员管理系统到登录界面
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/back", method = RequestMethod.GET)
     public String goBackToLogin(HttpSession session)
     {

@@ -9,6 +9,12 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
+/**
+ *
+ * @author 徐豪智
+ * @description   用于配置mysql数据库
+ *
+ */
 public class DataSourceConfig
 {
 

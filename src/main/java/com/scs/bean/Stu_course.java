@@ -1,5 +1,10 @@
 package com.scs.bean;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   学生-课程类
+ *
+ */
 public class Stu_course
 {
     private Long stUid;

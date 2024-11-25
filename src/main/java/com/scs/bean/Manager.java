@@ -1,5 +1,10 @@
 package com.scs.bean;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   管理员类
+ *
+ */
 public class Manager
 {
     private Long mId;

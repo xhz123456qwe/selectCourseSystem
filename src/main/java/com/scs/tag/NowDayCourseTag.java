@@ -10,7 +10,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   实现当天课程表的课程的显示的自定义Tag
+ */
 public class NowDayCourseTag extends SimpleTagSupport
 {
     private List<Course> courseList;

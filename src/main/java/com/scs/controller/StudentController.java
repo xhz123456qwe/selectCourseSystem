@@ -24,7 +24,11 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   学生管理系统
+ */
 @Controller
 @RequestMapping("/student")
 public class StudentController
@@ -38,7 +42,17 @@ public class StudentController
     @Autowired
     private Stu_courseService stu_courseService;
 
-
+    /**
+     * 判断学生是否存在
+     * @param username
+     * @param password
+     * @param remember
+     * @param session
+     * @param model
+     * @param request
+     * @param response
+     * @return
+     */
     @PostMapping()
     public String judgeStudent(
             @RequestParam("username")
@@ -75,6 +89,13 @@ public class StudentController
         }
     }
 
+    /**
+     *  处理相关信息，跳转到学生主页
+     * @param model
+     * @param session
+     * @param request
+     * @return
+     */
     @RequestMapping("/mainPage")
     public String showMainPage(Model model, HttpSession session, HttpServletRequest request)
     {
@@ -135,11 +156,22 @@ public class StudentController
         return "stuMainPage";
     }
 
+    /**
+     * 更新密码
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/toUpdatePwd",method = RequestMethod.GET)
     public String toUpdatePwd(Model model){
         model.addAttribute("key","1");
         return "updatePwd";
     }
+
+    /**
+     * 更新邮箱
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/toUpdateEmail",method = RequestMethod.GET)
     public String toUpdateEmail(Model model){
         model.addAttribute("key","2");
@@ -173,6 +205,11 @@ public class StudentController
         return "redirect:/student/mainPage";
     }
 
+    /**
+     * 学生选课
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/selectCourse", method = RequestMethod.GET)
     public String selectCourse(HttpSession session)
     {
@@ -231,6 +268,13 @@ public class StudentController
      *       s_sc_totalPages   session   total pages
      *       s_sc_currentPages  session   now page
      * */
+
+    /**
+     * 学生选课分页处理
+     * @param page
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/selectCourse1", method = RequestMethod.GET)
     public String selectCourseByPage(@RequestParam("page") Integer page, HttpSession session)
     {
@@ -253,6 +297,17 @@ public class StudentController
         return "selectCourse";
     }
 
+    /**
+     * 在查询后进行翻页操作
+     * @param cname
+     * @param cnumber
+     * @param teacher
+     * @param state
+     * @param page
+     * @param model
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/showCourseBySearch/{page}", method = RequestMethod.POST)
     public String getSearchCourse(
             @RequestParam("cname")
@@ -369,6 +424,13 @@ public class StudentController
         return "selectCourse";
     }
 
+    /**
+     * 选课状态变化处理
+     * @param cid
+     * @param page
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/select/{cid}/{page}", method = RequestMethod.GET)
     public String selectOrDelete(
             @PathVariable(value = "cid")
@@ -429,7 +491,11 @@ public class StudentController
         return "redirect:/student/selectCourse1?page=" + page;
     }
 
-
+    /**
+     * 显示所有已选择的课程
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/showCourse", method = RequestMethod.GET)
     public String mySelectedCourse(HttpSession session)
     {
@@ -489,6 +555,13 @@ public class StudentController
      *       pgc2        session      now page
      *       curpgc      session      total pages
      * */
+
+    /**
+     * 展示所有分页后的课程
+     * @param page
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/showCourse1", method = RequestMethod.GET)
     public String getShowCourse2(
             @RequestParam(value = "page")
@@ -513,7 +586,16 @@ public class StudentController
         return "mySelectedCourse";
     }
 
-
+    /**
+     * 处理查询后翻页的BUG
+     * @param cname
+     * @param tName
+     * @param cNum
+     * @param state
+     * @param department
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/showCourse2", method = RequestMethod.POST)
     public String getShowCourse2(
             @RequestParam(value = "cname")
@@ -622,6 +704,12 @@ public class StudentController
         return "mySelectedCourse";
     }
 
+    /**
+     * 显示课程表
+     * @param session
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/stuCourseTable", method = RequestMethod.GET)
     public String showCourseTable(HttpSession session, Model model)
     {
@@ -643,6 +731,11 @@ public class StudentController
         return "stuCourseTable";
     }
 
+    /**
+     * 退出学生选课系统
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/back", method = RequestMethod.GET)
     public String goBackToLogin(HttpSession session)
     {

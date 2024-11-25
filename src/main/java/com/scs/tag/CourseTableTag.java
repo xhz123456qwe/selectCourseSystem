@@ -10,7 +10,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.io.IOException;
 import java.util.Random;
-
+/**
+ *
+ * @author 徐豪智
+ * @description   实现所有已选择的课程的课程表的显示的自定义Tag
+ */
 public class CourseTableTag extends SimpleTagSupport
 {
     private List<Course> courseChosen;
