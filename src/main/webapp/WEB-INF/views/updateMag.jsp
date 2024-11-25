@@ -15,7 +15,7 @@
   <div class="b1">
     <form method="post" action="${pageContext.request.contextPath}/manager/updateMagInfo">
       <div class="b11" style="margin-right: 20px">
-        <label>账号ID</label>
+        <label>账号ID&nbsp;&nbsp;</label>
         <input type="text" name="mnumber" value="${mag.mNumber}" readonly>
       </div>
       <div class="b11">

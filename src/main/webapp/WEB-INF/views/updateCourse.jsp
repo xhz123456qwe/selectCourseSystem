@@ -46,7 +46,7 @@
                 <input type="text" name="maxNumber" value="${course.maxNumber}">
             </div>
             <div class="acb1" style="margin-top: 40px">
-                <label>描述</label>
+                <label>描&emsp;&emsp;述</label>
                 <textarea name="description" rows="12" cols="31">${course.description}</textarea>
             </div>
         </div>

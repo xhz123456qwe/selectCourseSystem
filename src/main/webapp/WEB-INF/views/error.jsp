@@ -48,7 +48,7 @@
   <c:if test="${not empty stuLoginError}">
     <div style="float:left;height: 30px;line-height: 30px;text-align: center;font-size: 25px;
     font-family: STXinwei;font-weight: bold;margin-top: 30px;margin-bottom: 100px;width: 100%;">
-      登录学生账号失败，请重新登录
+      学生密码被修改或错误，请重新登录
     </div>
     <a href="${pageContext.request.contextPath}/" style="padding: 3px 20px;
     background-color:#2b669a;color:white;text-align: center;width: 100%;height: 30px;margin-left: 360px">返回登录界面</a>
@@ -56,7 +56,7 @@
   <c:if test="${not empty magLoginError}">
     <div style="float:left;height: 30px;line-height: 30px;text-align: center;font-size: 25px;
     font-family: STXinwei;font-weight: bold;margin-top: 30px;margin-bottom: 100px;width: 100%;">
-      登录管理员账号失败，请重新登录
+      管理员密码被修改或失效，请重新登录
     </div>
     <a href="${pageContext.request.contextPath}/" style="padding: 3px 20px;
     background-color:#2b669a;color:white;text-align: center;width: 100%;height: 30px;margin-left: 360px">返回登录界面</a>

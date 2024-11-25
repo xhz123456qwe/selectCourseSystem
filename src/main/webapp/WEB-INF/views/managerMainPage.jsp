@@ -44,7 +44,7 @@
 </header>
 <br/><br/><br/><br/><br/>
 <div class="w">
-  <div class="body1">
+  <div class="body1" style="height: 600px;">
     <div class="my_inf">
       <div class="state">
         当前帐号状态

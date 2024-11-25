@@ -265,8 +265,10 @@
         </div>
         <div class="tit2">修改密码</div>
         <div class="cont2">建议您定期更换密码，安全密码组合为含有数字、字母、特殊字符的8~20位组合</div>
-        <div class="submit" style="top: 730px;">
-          <input type="submit" value="修改" style="margin-top: 30px"/>
+        <div class="submit" style="top: 730px;width: 100px;">
+<%--          <input type="submit" value="修改" style="margin-top: 30px"/>--%>
+          <a href="<c:url value="/student/toUpdatePwd"/>" style="margin-top: 30px;padding: 4px 18px;background-color:#2b669a;
+color: white;border: 0">修改</a>
         </div>
       </div>
       <div class="safe">
@@ -280,8 +282,10 @@
           </c:if>
         </div>
         <div class="cont2">设置安全邮箱可以用来登录和找回密码</div>
-        <div class="submit" style="top: 800px;">
-          <input type="submit" value="修改" style="margin-top: 30px"/>
+        <div class="submit" style="top: 800px;width: 100px;">
+<%--          <input type="submit" value="修改" style="margin-top: 30px"/>--%>
+          <a href="<c:url value="/student/toUpdateEmail"/>" style="margin-top: 30px;padding: 4px 18px;background-color:#2b669a;
+color: white;border: 0">修改</a>
         </div>
       </div>
     </div>

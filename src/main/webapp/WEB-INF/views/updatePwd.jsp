@@ -10,52 +10,44 @@
 <body>
 <div class="container-fluid side">
   <div class="addTit">
-    修改学生信息
+    修改密码
   </div>
   <div class="addB">
-    <form action="${pageContext.request.contextPath}/manager/stuInfo/updateStu/${page}" method="post">
+    <form action="${pageContext.request.contextPath}/student/updatePwd" method="post">
       <div class="bol">
         <div class="bol1">
           <label>学生姓名</label>
-          <input type="text" name="sname" value="${updateStu.sName}"/><br>
+          <input type="text" name="sname" value="${sessionScope.student.sName}" readonly/><br>
         </div>
         <div class="bol1">
           <label>学&emsp;&emsp;号</label>
-          <input type="text" name="snumber" value="${updateStu.sNumber}" readonly/><br>
+          <input type="text" name="snumber" value="${sessionScope.student.sNumber}" readonly/><br>
         </div>
         <div class="bol1">
           <label>账号密码</label>
-          <input type="text" name="password" value="${updateStu.password}"/><br>
+          <c:if test="${key.equals('1')}">
+            <input type="text" name="password" value="${sessionScope.student.password}"/><br>
+          </c:if>
+          <c:if test="${key.equals('2')}">
+            <input type="text" name="password" value="${sessionScope.student.password}" readonly/><br>
+          </c:if>
         </div>
         <div class="bol1">
           <label>所属学院</label>
-          <input type="text" name="department" value="${updateStu.department}"/><br>
+          <input type="text" name="department" value="${sessionScope.student.department}" readonly/><br>
         </div>
         <div class="bol1">
           <label>邮&emsp;&emsp;箱</label>
-          <input type="text" name="email" value="${updateStu.email}"/><br>
+          <c:if test="${key.equals('1')}">
+            <input type="text" name="email" value="${sessionScope.student.email}" readonly/><br>
+          </c:if>
+          <c:if test="${key.equals('2')}">
+            <input type="text" name="email" value="${sessionScope.student.email}"/><br>
+          </c:if>
         </div>
       </div>
-      <div class="bol" style="margin-left: 30px;padding-top:100px;width: 250px;">
-        <fieldset>
-          <legend>年&emsp;&emsp;级</legend>
-          <div>
-            <input type="radio" id="grade1" name="grade" value="大一" checked/>
-            <label for="grade1">大一</label>
-          </div>
-          <div>
-            <input type="radio" id="grade2" name="grade" value="大二" />
-            <label for="grade2">大二</label>
-          </div>
-          <div>
-            <input type="radio" id="grade3" name="grade" value="大三" />
-            <label for="grade3">大三</label>
-          </div>
-          <div>
-            <input type="radio" id="grade4" name="grade" value="大四" />
-            <label for="grade4">大四</label>
-          </div>
-        </fieldset>
+      <div class="bol" style="margin-left: 30px;padding-bottom:50px;width: 363px;">
+        <img src="<c:url value="/static/imgs/addMag.png"/>"/>
       </div>
       <div style="float:left;height: 30px;width: 100%;text-align: center;line-height: 30px">
         <input type="submit" value="提交" style="padding-left: 20px;padding-right: 20px;

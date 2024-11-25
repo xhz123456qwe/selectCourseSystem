@@ -5,10 +5,10 @@
 
             <head>
                 <title>stu Course Table</title>
-                <link href="<c:url value=" /static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />" rel="stylesheet">
-                <link rel="stylesheet" type="text/css" href="<c:url value=" /static/css/head.css" />">
-                <link rel="stylesheet" type="text/css" href="<c:url value=" /static/css/footer.css" />">
-                <link rel="stylesheet" type="text/css" href="<c:url value=" /static/css/stuCourseTable.css" />">
+                <link href="<c:url value="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />" rel="stylesheet">
+                <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/head.css" />">
+                <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/footer.css" />">
+                <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/stuCourseTable.css" />">
             </head>
 
             <body>
@@ -19,7 +19,7 @@
                 <header class="top">
                     <div class="w">
                         <div class="logo">
-                            <img src="<c:url value=" /static/imgs/logo.png" />" alt="logo">
+                            <img src="<c:url value="/static/imgs/logo.png" />" alt="logo">
                         </div>
                         <div class="name">
                             校园选课系统
@@ -28,11 +28,11 @@
                             <div class="navitems_in">
                                 <ul>
                                     <li>
-                                        <a href="<c:url value=" /student/mainPage" />">首页</a>
+                                        <a href="<c:url value="/student/mainPage" />">首页</a>
                                     </li>
-                                    <li><a href="<c:url value=" /student/selectCourse" />">选择课程</a></li>
-                                    <li><a href="<c:url value=" /student/showCourse" />">已选课程</a></li>
-                                    <li><a href="<c:url value=" /student/stuCourseTable" />" class="choose">课程表</a></li>
+                                    <li><a href="<c:url value="/student/selectCourse" />">选择课程</a></li>
+                                    <li><a href="<c:url value="/student/showCourse" />">已选课程</a></li>
+                                    <li><a href="<c:url value="/student/stuCourseTable" />" class="choose">课程表</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -42,9 +42,9 @@
                         </div>
                         <div class="back">
                             <div class="backPic">
-                                <img src="<c:url value=" /static/imgs/back.png" />" alt="back"/>
+                                <img src="<c:url value="/static/imgs/back.png" />" alt="back"/>
                             </div>
-                            <a href="<c:url value=" /student/back" />" class="backWords">退出</a>
+                            <a href="<c:url value="/student/back" />" class="backWords">退出</a>
                         </div>
                     </div>
                 </header>
@@ -124,16 +124,16 @@
                             <div class="pic3">FOLLOW</div>
                             <div class="pic4">
                                 <div class="pic5">
-                                    <img src="<c:url value=" /static/imgs/github.png" />" alt="github"/>
+                                    <img src="<c:url value="/static/imgs/github.png" />" alt="github"/>
                                 </div>
                                 <div class="pic5">
-                                    <img src="<c:url value=" /static/imgs/wechat.png" />" alt="wechat"/>
+                                    <img src="<c:url value="/static/imgs/wechat.png" />" alt="wechat"/>
                                 </div>
                                 <div class="pic5">
-                                    <img src="<c:url value=" /static/imgs/qq.png" />" alt="qq"/>
+                                    <img src="<c:url value="/static/imgs/qq.png" />" alt="qq"/>
                                 </div>
                                 <div class="pic5">
-                                    <img src="<c:url value=" /static/imgs/x.png" />" alt="x"/>
+                                    <img src="<c:url value="/static/imgs/x.png" />" alt="x"/>
                                 </div>
                             </div>
                         </div>

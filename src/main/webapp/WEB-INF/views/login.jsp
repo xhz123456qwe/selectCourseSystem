@@ -7,8 +7,8 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Login</title>
-            <link href="<c:url value=" /static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="<c:url value=" /static/css/login.css" /> ">
+            <link href="<c:url value="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/login.css" /> ">
         </head>
 
         <body>

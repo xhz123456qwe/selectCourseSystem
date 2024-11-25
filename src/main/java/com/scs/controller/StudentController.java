@@ -1,5 +1,6 @@
 package com.scs.controller;
 
+import com.oracle.wls.shaded.org.apache.xpath.operations.Mod;
 import com.scs.bean.Course;
 import com.scs.bean.Stu_course;
 import com.scs.bean.Student;
@@ -132,6 +133,44 @@ public class StudentController
         String contextPath = request.getContextPath();
         session.setAttribute("contextPath",contextPath);
         return "stuMainPage";
+    }
+
+    @RequestMapping(value = "/toUpdatePwd",method = RequestMethod.GET)
+    public String toUpdatePwd(Model model){
+        model.addAttribute("key","1");
+        return "updatePwd";
+    }
+    @RequestMapping(value = "/toUpdateEmail",method = RequestMethod.GET)
+    public String toUpdateEmail(Model model){
+        model.addAttribute("key","2");
+        return "updatePwd";
+    }
+
+    @RequestMapping(value = "/updatePwd",method = RequestMethod.POST)
+    public String updatePwd(
+            @RequestParam(value = "password")
+            String password,
+            @RequestParam(value = "email")
+            String email,
+            HttpSession session,
+            Model model,
+            HttpServletRequest request,
+            HttpServletResponse response
+    ){
+        Student student = (Student)session.getAttribute("student");
+        studentService.updateStu(student.getsId(),student.getsName(),password,student.getGrade(),student.getDepartment()
+        ,email);
+        Student studentBySid = studentService.getStudentBySid(student.getsId());
+        session.setAttribute("student",studentBySid);
+        Cookie[] cookies = request.getCookies();
+        for (Cookie cookie:cookies){
+            if ("stuPassword".equals(cookie.getName())){
+                cookie.setValue(student.getPassword());
+                cookie.setMaxAge(60*60*24*10);
+                response.addCookie(cookie);
+            }
+        }
+        return "redirect:/student/mainPage";
     }
 
     @RequestMapping(value = "/selectCourse", method = RequestMethod.GET)

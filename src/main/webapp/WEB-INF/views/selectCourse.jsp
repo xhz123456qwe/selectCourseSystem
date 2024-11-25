@@ -91,7 +91,7 @@
           <th>${course.cName}</th>
           <td>${course.cNumber}</td>
           <td>${course.teacher}</td>
-          <td>${course.cDay}</td>
+          <td>${course.cStart}-<br/>${course.cEnd}<br/>${course.cDay}&emsp;${course.cTime}</td>
           <td>${course.location}</td>
           <td>${course.nowNum}/${course.maxNumber}</td>
           <c:forEach var="state" items="${sessionScope.courseState}">
@@ -148,10 +148,6 @@
           <a href="${pageContext.request.contextPath}/student/selectCourse1?page=${sessionScope.s_sc_currentPages + 1}"
             class="a_border">下一页</a>
         </c:if>
-
-        <div class="jumpTo">
-          跳转到<input type="text" name="page">
-        </div>
     </div>
   </div>
 </div>

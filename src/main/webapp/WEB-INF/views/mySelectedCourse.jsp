@@ -96,7 +96,7 @@
                             <td><c:out value="${course.cName}"/></td>
                             <td><c:out value="${course.cNumber}"/></td>
                             <td><c:out value="${course.credit}"/></td>
-                            <td><c:out value="${course.cTime}"/></td>
+                            <td><c:out value="${course.cStart}-${course.cEnd}   ${course.cDay}  ${course.cTime}"/></td>
                             <td><c:out value="${course.location}"/></td>
                             <td><c:out value="${course.department}"/></td>
                             <td><c:out value="${course.teacher}"/></td>
